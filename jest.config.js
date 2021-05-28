@@ -3,9 +3,7 @@ module.exports = {
   ...preset,
   testEnvironment: 'jsdom',
   preset: "jest-preset-angular",
-  setupFilesAfterEnv: [
-    "<rootDir>/node_modules/jest-preset-angular/build/setup-jest.js"
-  ],
+  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   testMatch: ["**/*.spec.ts"],
   globals: {
     ...preset.globals,
