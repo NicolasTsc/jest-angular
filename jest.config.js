@@ -1,16 +1,7 @@
-var preset = require("jest-preset-angular/jest-preset");
+require('jest-preset-angular/ngcc-jest-processor');
+
+/** @type {import('@jest/types').Config.InitialOptions} */
 module.exports = {
-  ...preset,
-  testEnvironment: 'jsdom',
   preset: "jest-preset-angular",
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
-  testMatch: ["**/*.spec.ts"],
-  globals: {
-    ...preset.globals,
-    "ts-jest": {
-      ...preset.globals["ts-jest"],
-      tsConfig: "src/tsconfig.test.json",
-      isolatedModules: true
-    }
-  }
 };
